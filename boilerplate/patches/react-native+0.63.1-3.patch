@@ -1,0 +1,18 @@
+diff --git a/node_modules/react-native/Libraries/Components/StatusBar/StatusBar.js b/node_modules/react-native/Libraries/Components/StatusBar/StatusBar.js
+index 81ab87e..b2fe3f2 100644
+--- a/node_modules/react-native/Libraries/Components/StatusBar/StatusBar.js
++++ b/node_modules/react-native/Libraries/Components/StatusBar/StatusBar.js
+@@ -12,6 +12,7 @@
+ 
+ const Platform = require('../../Utilities/Platform');
+ const React = require('react');
++const UnimplementedView = require('../UnimplementedViews/UnimplementedView');
+ 
+ const invariant = require('invariant');
+ const processColor = require('../../StyleSheet/processColor');
+@@ -498,4 +499,4 @@ class StatusBar extends React.Component<Props> {
+   }
+ }
+ 
+-module.exports = StatusBar;
++module.exports = Platform.isTVOS ? UnimplementedView : StatusBar;

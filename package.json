@@ -1,9 +1,9 @@
 {
-  "name": "ignite-bowser",
-  "description": "Infinite Red's hot boilerplate for React Native.",
+  "name": "ignite-bowser-tv",
+  "description": "Infinite Red's hot boilerplate for React Native, customized for TV",
   "license": "MIT",
-  "repository": "infinitered/ignite-bowser",
-  "homepage": "https://github.com/infinitered/ignite-bowser",
+  "repository": "dlowder-salesforce/ignite-bowser-tv",
+  "homepage": "https://github.com/dlowder-salesforce/ignite-bowser-tv",
   "version": "5.4.1",
   "files": [
     "boilerplate.js",

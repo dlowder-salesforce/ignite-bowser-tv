@@ -164,6 +164,7 @@ export const install = async (toolbox: IgniteToolbox) => {
   filesystem.copy(`${boilerplatePath}/test`, `${process.cwd()}/test`, copyOpts)
   filesystem.copy(`${boilerplatePath}/storybook`, `${process.cwd()}/storybook`, copyOpts)
   filesystem.copy(`${boilerplatePath}/bin`, `${process.cwd()}/bin`, copyOpts)
+  filesystem.copy(`${boilerplatePath}/patches`, `${process.cwd()}/patches`, copyOpts)
   includeDetox && filesystem.copy(`${boilerplatePath}/e2e`, `${process.cwd()}/e2e`, copyOpts)
 
   if (useExpo && !includeDetox) {
@@ -323,7 +324,7 @@ export const install = async (toolbox: IgniteToolbox) => {
 
     ignite.log("adding boilerplate to project for generator commands")
 
-    const boilerplate = parameters.options.b || parameters.options.boilerplate || "ignite-bowser"
+    const boilerplate = parameters.options.b || parameters.options.boilerplate || "ignite-bowser-tv"
     const isIgniteInstalled = await system.which(`ignite`)
     const igniteCommand = isIgniteInstalled ? "ignite" : "npx ignite-cli"
     await system.exec(`${igniteCommand} add ${boilerplate} ${debugFlag}`)
