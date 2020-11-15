@@ -1,6 +1,6 @@
 <p align="center"><img src="http://ir_public.s3.amazonaws.com/projects/ignite/ignite-bowser-launch-screen.png" alt="logo" width="414px"></p>
 
-# Ignite Bowser - the hottest React Native boilerplate
+# Ignite Bowser - the hottest React Native boilerplate (with TV support added)
 
 <a href="https://badge.fury.io/js/ignite-bowser" target="_blank"><img src="https://badge.fury.io/js/ignite-bowser.svg" alt="npm version" height="20"></a>
 
@@ -53,6 +53,29 @@ ignite new MyApp -b bowser
 You should see an app that looks like the screenshot above!
 
 Next step -- follow this tutorial to learn how to create a trivia app with Ignite Bowser: https://shift.infinite.red/creating-a-trivia-app-with-ignite-bowser-part-1-1987cc6e93a1
+
+## Quick Start for TV using this repo
+
+As above, install `ignite-cli` globally.  Then
+
+```bash
+# Pull and build this repo
+git clone https://github.com/dlowder-salesforce/ignite-bowser-tv
+cd ignite-bowser-tv
+yarn
+yarn build
+cd ..
+# Create new Ignite project (Detox and Expo don't work on Apple TV)
+ignite new IgniteTV --boilerplate=./ignite-bowser-tv --no-detox --no-expo
+cd IgniteTV/
+# Run the new project on iPhone simulator
+react-native run-ios
+# Run the new project on Apple TV simulator
+react-native run-ios --simulator="Apple TV (14.0)" --scheme="IgniteTV-tvOS"
+# Start an Android emulator (phone or TV), then run the project there
+react-native run-android
+adb reverse tcp:9090 tcp:9090
+```
 
 ## Generators
 
