@@ -66,7 +66,7 @@ yarn
 yarn build
 cd ..
 # Create new Ignite project (Detox and Expo don't work on Apple TV)
-ignite new IgniteTV --boilerplate=./ignite-bowser-tv --no-detox --no-expo
+npx ignite-cli@3 new IgniteTV --boilerplate=./ignite-bowser-tv --no-detox --no-expo
 cd IgniteTV/
 # Run the new project on iPhone simulator
 react-native run-ios
